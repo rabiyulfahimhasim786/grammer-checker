@@ -9,10 +9,10 @@ def index(request):
     text = 'JavaScript engines are originaly used only the web browsers, but are now core components of some servers and a variety of aplictions. The most popular runtime system of this usage is Node.js.'
     parser = GingerIt()
     output = parser.parse(text)
-    with open("sample.json", "w") as outfile:
+    with open("/var/www/subdomain/spellchecker/grammer/media/json/test.json", "w") as outfile:
         json.dump(output, outfile)
     # Opening JSON file
-    f = open('sample.json')
+    f = open('/var/www/subdomain/spellchecker/grammer/media/json/test.json')
     data = json.load(f)
     # list
     print(data['result'])
